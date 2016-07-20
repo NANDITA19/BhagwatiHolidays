@@ -42,7 +42,18 @@
 
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/splash_ml</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:windowBackground">@drawable/background</item>
+
+
+    </style>
+
+    <style name="initial" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:windowBackground">@drawable/initial</item>
 
 
     </style>

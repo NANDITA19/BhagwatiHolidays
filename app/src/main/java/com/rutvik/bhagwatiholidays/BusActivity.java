@@ -6,15 +6,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 
-public class BusActivity extends AppCompatActivity {
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
+
+import java.util.Calendar;
+
+public class BusActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
     private Toolbar mToolbar;
 
     private EditText etMobilePhone, etFrom, etTo, etDateOfTravel;
 
     private FloatingActionButton fabDone;
+
+    DatePickerDialog datePickerDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +30,7 @@ public class BusActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Book Buses");
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,6 +43,29 @@ public class BusActivity extends AppCompatActivity {
 
         etDateOfTravel = (EditText) findViewById(R.id.et_dateOfTravel);
 
+
+        etDateOfTravel.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    datePickerDialog.show(getFragmentManager(), "DateOfTravel");
+                }
+            }
+        });
+
+        etDateOfTravel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.show(getFragmentManager(), "DateOfTravel");
+            }
+        });
+
+        Calendar calendar = Calendar.getInstance();
+        datePickerDialog = com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.setMinDate(calendar);
+
+
         fabDone = (FloatingActionButton) findViewById(R.id.done);
 
     }
@@ -44,10 +75,16 @@ public class BusActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
-                startActivity(new Intent(BusActivity.this, SwipeTabActivity.class));
                 finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth)
+    {
+        String date = dayOfMonth + "-" + (monthOfYear + 1) + "-" + year;
+        etDateOfTravel.setText(date);
     }
 }

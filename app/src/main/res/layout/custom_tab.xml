@@ -5,7 +5,4 @@
     android:id="@+id/tab"
     android:layout_gravity="center"
     android:textAlignment="center"
-    android:gravity="center"
-    android:text="AIR TICKETS"
-    android:textColor="#000000"
-    android:textSize="@dimen/tab_label" />
+    android:gravity="center"/>

@@ -26,7 +26,6 @@ public class HolidayFormActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(null);
 
         setTitle("Holiday Booking");
 

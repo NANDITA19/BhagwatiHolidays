@@ -52,6 +52,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
         Set<String> navDrawerTitleSet = new LinkedHashSet<>();
         navDrawerTitleSet.add("Offers & Promotions");
         navDrawerTitleSet.add("My Bookings");
+        navDrawerTitleSet.add("Book Buses");
         navDrawerTitleSet.add("Share");
         navDrawerTitleSet.add("Rate Us");
 

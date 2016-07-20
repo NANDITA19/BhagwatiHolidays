@@ -3,12 +3,12 @@
     <!--<color name="colorPrimary">#3F51B5</color>-->
     <color name="colorPrimary">#FFFFFF</color>
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
-    <color name="colorPrimaryDark">#FF9800</color>
+    <color name="colorPrimaryDark">#43a047</color>
     <color name="colorPrimaryExtraDark">#fff</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
-    <color name="colorAccent">#FF9800</color>
+    <color name="colorAccent">#43a047</color>
 
     <!--Colors for btn BOOK-NOW-->
     <color name="btnNormal">#F44336</color>

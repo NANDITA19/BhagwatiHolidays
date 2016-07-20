@@ -62,7 +62,6 @@ public class SingleOfferViewActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(null);
 
         setTitle("Offer Details");
 
@@ -84,7 +83,7 @@ public class SingleOfferViewActivity extends AppCompatActivity {
 
                 app.trackEvent(SingleOfferViewActivity.class.getSimpleName(),"BOOK NOW CLICKED","BUTTON");
 
-                startActivity(new Intent(SingleOfferViewActivity.this, HolidayFormActivity.class));
+                startActivity(new Intent(SingleOfferViewActivity.this, PaymentActivity.class));
 
             }
         });

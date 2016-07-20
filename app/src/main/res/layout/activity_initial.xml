@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#91221b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
     >
 
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="420dp"
-
-            android:layout_centerInParent="true"
-            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
 
         <LinearLayout
-            android:id="@+id/ll_bhWhite"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/bh_white"
-            android:layout_marginBottom="-50dp"/>
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:padding="30dp"
-            android:src="@drawable/bh_content_white" />
-
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/btn_signIn"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-
-                android:paddingTop="0dp"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"/>
 
         </LinearLayout>
 
-        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <com.google.android.gms.common.SignInButton
+                android:layout_marginTop="20dp"
+                android:id="@+id/btn_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/bottom_line"/>
+
+    </LinearLayout>
+
 
 
 

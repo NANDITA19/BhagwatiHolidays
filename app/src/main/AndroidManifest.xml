@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rutvik.bhagwatiholidays">
+          package="com.rutvik.bhagwatiholidays">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
 
     <permission
         android:name="com.rutvik.bhagwatiholidays.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
+        android:protectionLevel="signature"/>
 
-    <uses-permission android:name="com.rutvik.bhagwatiholidays.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.rutvik.bhagwatiholidays.permission.C2D_MESSAGE"/>
 
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:icon="@drawable/bh_icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDWglbshyYJ62AFJgYXncntdMq30PxL130" />
+            android:value="AIzaSyDWglbshyYJ62AFJgYXncntdMq30PxL130"/>
         <meta-data
             android:name="io.branch.sdk.BranchKey"
-            android:value="key_live_jobYwEC4RDj7qiGLV32VjhfiuuomI8ua" />
+            android:value="key_live_jobYwEC4RDj7qiGLV32VjhfiuuomI8ua"/>
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+            android:value="@string/facebook_app_id"/>
         <meta-data
             android:name="com.facebook.sdk.ApplicationName"
-            android:value="@string/app_name" />
+            android:value="@string/app_name"/>
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider658868440928736"
-            android:exported="true" />
+            android:exported="true"/>
 
         <!-- Facebook Activity -->
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/splashScreenTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".SwipeTabActivity"
             android:label="Bhagwati Holidays"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <activity
             android:name=".OffersActivity"
             android:label="Offers"
@@ -71,34 +71,36 @@
             <intent-filter>
                 <data
                     android:host="open"
-                    android:scheme="combhagwatiholidays" />
+                    android:scheme="combhagwatiholidays"/>
 
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
             </intent-filter>
         </activity>
-        <activity android:name=".InitialActivity" />
-        <activity android:name=".BusActivity" />
-        <activity android:name=".LocateUsActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".InitialActivity"
+            android:theme="@style/initial"/>
+        <activity android:name=".BusActivity"/>
+        <activity android:name=".LocateUsActivity"/>
+        <activity android:name=".SettingsActivity"/>
         <activity
             android:name=".HolidayFormActivity"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".SinglePackageViewActivity" />
-        <activity android:name=".SingleOfferViewActivity" />
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".SinglePackageViewActivity"/>
+        <activity android:name=".SingleOfferViewActivity"/>
 
         <receiver
             android:name="com.google.android.gms.gcm.GcmReceiver"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
 
-                <category android:name="com.example.gcm" />
+                <category android:name="com.example.gcm"/>
 
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
             </intent-filter>
         </receiver>
 
@@ -106,26 +108,27 @@
             android:name="gcm.MyGcmListenerService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
             </intent-filter>
         </service>
         <service
             android:name="gcm.MyInstanceIDListenerService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
             </intent-filter>
         </service>
         <service
             android:name="gcm.RegistrationIntentService"
-            android:enabled="true" />
+            android:enabled="true"/>
 
         <activity
             android:name=".PaymentActivity"
             android:label="@string/title_activity_payment"
-            android:theme="@style/MyMaterialTheme" />
+            android:theme="@style/MyMaterialTheme"/>
 
-        <activity android:name=".MyBookingActivity"
+        <activity
+            android:name=".MyBookingActivity"
             android:parentActivityName=".SwipeTabActivity"/>
         <activity
             android:name=".BookingDetailsActivity">

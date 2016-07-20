@@ -11,7 +11,7 @@ public class ICICIStringEncryptor {
 
     public static String encrypt(String inputParam) {
 
-        String key="1000240668105017";
+        String key="1000240268105017";
 
         byte[] abyte2 = (byte[]) null;
 

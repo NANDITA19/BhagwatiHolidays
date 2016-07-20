@@ -9,8 +9,7 @@
     <item>
         <bitmap
             android:antialias="true"
-            android:gravity="center"
-            android:src="@drawable/tripnjoy" />
+            android:src="@drawable/background" />
     </item>
 
 </layer-list>
